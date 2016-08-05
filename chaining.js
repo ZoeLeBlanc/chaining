@@ -1,7 +1,7 @@
-
+var output = document.getElementById("output");
 var integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
-/*
-var sortIntegers = integers.sort(function(first, second){ return first - second});
+
+var sortIntegers = integers.sort(function(first, second) { return first - second});
 var filterIntegers = integers.filter(function(integers){
 	return integers <= 19 
 });
@@ -16,7 +16,8 @@ console.log(sortIntegers);
 console.log(filterIntegers);
 console.log(mapIntegers);
 console.log(reducedIntegers);
-*/
-var chainedIntegers = integers.sort(function(first, second) {return first - second}).filter(function(integer) {return integer <= 19}).map(function(integers) {integers * 1.5 - 1 }).reduce(function(previous, current) {return previous + current});
 
-console.log(chainedIntegers);
+integers.sort(function(first, second) { return first - second}).filter(function(integers) {return integers <= 19}).map(function(integers) {return integers * 1.5 -1}).reduce(function(previous, current) {return previous + current});
+
+console.log(integers);
+//output.innerHTML = integers;
